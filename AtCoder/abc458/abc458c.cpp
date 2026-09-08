@@ -1,0 +1,33 @@
+/*
+ * Author: vss_1307
+ * Created: 2026-05-16 17:37:42
+ */
+#include <bits/stdc++.h>
+using namespace std;
+
+using ll = long long;
+const int MOD = 1e9 + 7;
+const int MAXN = 1e6 + 6;
+constexpr char nl = '\n';
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+
+void solve(){ 
+    string s; cin >> s;
+    ll n = s.size();
+    ll ans = 0;
+    for(ll i = 0; i < n; i++){
+        ll x = min(i+1, n-i);
+        if(s[i] == 'C') ans += x;
+    }
+    cout << ans << nl;
+}
+
+int main() {
+    ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
+    #ifndef ONLINE_JUDGE
+        freopen("error.txt", "w", stderr);
+    #endif
+    // int te; cin >> te;
+    // while (te--)
+        solve();
+}

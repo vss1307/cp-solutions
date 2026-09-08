@@ -1,0 +1,8 @@
+/CPH
+
+.cph/ 
+
+*.bin
+*.dSYM
+error.txt
+my_folder_structure.txt
